@@ -1,0 +1,1808 @@
+.about-page {
+  --about-ink: var(--navy);
+  --about-deep: #0e1b2d;
+  --about-ivory: var(--ivory);
+  --about-gold: var(--gold);
+  --about-line: rgba(23, 36, 58, .17);
+  overflow: clip;
+  background: var(--about-ivory);
+}
+
+
+.about-page .story {
+  padding: clamp(100px, 9.2vw, 145px) var(--page) 0;
+}
+
+.about-page .storyHeading {
+  display: grid;
+  grid-template-columns: auto minmax(72px, 10vw) auto;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 1.4vw, 24px);
+  color: var(--about-ink);
+  text-align: center;
+}
+
+.about-page .storyHeading h1,
+.about-page .storyWord {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(90px, 10.5vw, 160px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.about-page .storyHeading span {
+  width: 100%;
+  height: 7px;
+  background: var(--about-gold);
+}
+
+.about-page .storyMedia {
+  position: relative;
+  width: 100vw;
+  height: clamp(700px, 85svh, 1050px);
+  margin-top: clamp(35px, 4vw, 64px);
+  margin-left: calc(50% - 50vw);
+  overflow: visible;
+  background: transparent;
+}
+
+
+
+.about-page .storyMainImage {
+  object-fit: contain;
+  object-position: center top;
+  filter: none;
+}
+
+
+
+.about-page .storyMedia::after {
+  display: none;
+}
+
+.about-page .storyMediaDetail {
+  position: absolute;
+  z-index: 2;
+  right: clamp(24px, 6vw, 100px);
+  bottom: -34%;
+  width: clamp(220px, 28vw, 460px);
+  height: 42%;
+  border: 8px solid var(--about-ivory);
+  box-shadow: 0 18px 35px rgba(8, 20, 36, 0.16);
+}
+
+.about-page .storyMediaDetail img {
+  object-fit: cover;
+  filter: none;
+}
+
+
+.about-page .introduction {
+  padding: clamp(160px, 19vw, 285px) var(--page);
+}
+.about-page .introductionHead { display: grid; justify-items: center; max-width: 1100px; margin: 0 auto clamp(54px, 7vw, 106px); text-align: center; }
+.about-page .kicker { display: inline-flex; align-items: center; gap: 11px; margin: 0 0 23px; color: var(--about-gold); font-size: 10px; font-weight: 750; letter-spacing: .17em; line-height: 1.2; text-transform: uppercase; }
+.about-page .kicker::before { width: 7px; height: 7px; background: currentColor; content: ""; transform: rotate(45deg); }
+.about-page .introductionHead h2 { max-width: 16ch; font-size: clamp(46px, 6.2vw, 92px); line-height: .96; }
+.about-page .principlesLayout { display: grid; grid-template-columns: minmax(180px, .84fr) minmax(370px, 1.15fr) minmax(180px, .84fr); gap: clamp(20px, 2.3vw, 34px); align-items: stretch; max-width: 1440px; margin: auto; }
+.about-page .sideImage { position: relative; min-height: 600px; margin: 0; overflow: hidden; background: var(--about-deep); }
+.about-page .sideImage img { object-fit: cover; filter: saturate(.68) contrast(1.03); }
+.about-page .sideImageLeft img { object-position: 60% center; }
+.about-page .sideImageRight img { object-position: 50% center; }
+.about-page .principles { display: grid; align-content: center; gap: 13px; }
+.about-page .principle { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 0 16px; width: 100%; min-height: 112px; padding: 28px 30px; color: var(--about-ink); text-align: left; background: #fffdf8; border: 1px solid transparent; cursor: pointer; transition:
+  color 0.55s ease,
+  background 0.55s ease,
+  min-height 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+  transform 0.4s ease,
+  border-color 0.5s ease,
+  box-shadow 0.55s ease; }
+.about-page .principle:hover { transform: translateY(-2px); border-color: var(--about-gold); }
+.about-page .principleActive { min-height: 284px; color: var(--about-ivory); background: var(--about-deep); box-shadow: 0 18px 34px rgba(14, 27, 45, .16); }
+.about-page .principleTitle { display: inline-flex; align-items: center; gap: 14px; align-self: start; font-family: var(--display); font-size: clamp(29px, 3vw, 43px); font-weight: 400; letter-spacing: -.055em; line-height: .97; }
+.about-page .principleTitle svg { flex: 0 0 auto; color: var(--about-gold); }
+.about-page .principleDescription { grid-column: 1 / -1; max-width: 36ch; max-height: 0; margin-top: 0; overflow: hidden; color: rgba(247, 245, 239, 0); font-size: 14px; line-height: 1.72; opacity: 0; transition:
+  max-height 0.7s ease,
+  margin 0.65s ease,
+  color 0.5s ease,
+  opacity 0.55s ease; }
+.about-page .principleActive .principleDescription { max-height: 120px; margin-top: 22px; color: rgba(247, 245, 239, .77); opacity: 1; }
+.about-page .principleAction { align-self: start; color: var(--about-gold); font-size: 24px; font-weight: 300; line-height: .8; }
+
+.about-page .journey {
+  padding: 0 var(--page) clamp(110px, 14vw, 210px);
+  color: var(--about-ink);
+  background: #f3f3f3;
+}
+.about-page .journeyHead {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(90px, 11vw, 145px) 0 0;
+  text-align: center;
+}
+
+
+.about-page .journeyHead h2 {
+  margin: 0 0 0;
+  color: #191919;
+  font-family: var(--display);
+  font-size: clamp(72px, 8.5vw, 130px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+}
+
+.about-page .journeyHead > p:last-child {
+  display: none;
+}
+
+.about-page .timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2.4vw, 36px);
+  max-width: 1500px;
+  margin: clamp(150px, 15vw, 210px) auto 0;
+}
+
+.about-page .timeline::before { position: absolute; top: 50%; right: 0; left: 0; height: 1px; background: var(--about-ink); content: ""; }
+.about-page .milestone { position: relative; min-height: 522px; }
+.about-page .timelineAxis { position: absolute; z-index: 2; top: 50%; right: 0; left: 0; height: 1px; }
+.about-page .timelineAxis span { position: absolute; top: 50%; left: 50%; width: 11px; height: 11px; background: var(--about-gold); border: 2px solid var(--about-deep); border-radius: 50%; transform: translate(-50%, -50%); }
+.about-page .milestoneCard { position: absolute; right: 0; left: 0; display: grid; gap: 13px; padding: 25px; background: #fffdf9; box-shadow: 0 14px 30px rgba(23, 36, 58, .08); }
+.about-page .milestone:nth-child(odd) .milestoneCard { bottom: calc(50% + 49px); }
+.about-page .milestone:nth-child(even) .milestoneCard { top: calc(50% + 49px); }
+.about-page .milestoneCard::after { position: absolute; left: 50%; width: 1px; height: 49px; background: var(--about-ink); content: ""; }
+.about-page .milestone:nth-child(odd) .milestoneCard::after { top: 100%; }
+.about-page .milestone:nth-child(even) .milestoneCard::after { bottom: 100%; }
+.about-page .milestoneCard p { margin: 0; color: var(--about-gold); font-size: 9px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+.about-page .milestoneCard h3 { font-size: clamp(27px, 2.5vw, 38px); line-height: .98; }
+.about-page .milestoneImage { position: relative; height: 116px; overflow: hidden; margin-top: 3px; background: var(--about-deep); }
+.about-page .milestoneImage img { object-fit: cover; filter: saturate(.6); }
+.about-page .milestoneCard > span { color: #566170; font-size: 12px; line-height: 1.58; }
+.about-page .milestoneNumber { position: absolute; left: 50%; color: var(--about-ink); font-family: var(--display); font-size: 23px; letter-spacing: -.06em; transform: translateX(-50%); }
+.about-page .milestone:nth-child(odd) .milestoneNumber { top: calc(50% + 23px); }
+.about-page .milestone:nth-child(even) .milestoneNumber { bottom: calc(50% + 23px); }
+
+@media (max-width: 1100px) {
+  .about-page .sideImage { min-height: 545px; }
+  .about-page .milestone { min-height: 540px; }
+  .about-page .milestoneCard { padding: 19px; }
+}
+
+@media (max-width: 899px) {
+  .about-page .story { padding-top: 126px; }
+  .about-page .principlesLayout { grid-template-columns: 1fr 1fr; }
+  .about-page .principles { grid-column: 1 / -1; grid-row: 1; max-width: 700px; width: 100%; justify-self: center; padding: 26px; background: rgba(247, 245, 239, .93); }
+  .about-page .sideImage { min-height: 360px; }
+  .about-page .sideImageLeft { grid-column: 1; grid-row: 2; }
+  .about-page .sideImageRight { grid-column: 2; grid-row: 2; }
+  .about-page .timeline { grid-template-columns: 1fr 1fr; gap: 44px 25px; }
+  .about-page .timeline::before { display: none; }
+  .about-page .milestone { min-height: 470px; }
+  .about-page .milestoneCard { top: 0 !important; bottom: auto !important; }
+  .about-page .milestoneCard::after { display: none; }
+  .about-page .timelineAxis { top: auto; bottom: 0; }
+  .about-page .timelineAxis::before { position: absolute; right: 0; left: 0; height: 1px; background: var(--about-line); content: ""; }
+  .about-page .milestoneNumber { top: auto !important; bottom: -30px !important; left: 0; transform: none; }
+}
+
+@media (max-width: 640px) {
+  .about-page .story { padding-right: 20px; padding-left: 20px; }
+  .about-page .storyHeading { grid-template-columns: 1fr; gap: 11px; }
+  .about-page .storyHeading h1, .about-page .storyHeading strong { font-size: clamp(76px, 24vw, 112px); }
+  .about-page .storyHeading span { width: 74px; justify-self: center; }
+  .about-page .storyMedia { height: auto;
+min-height: 0;
+aspect-ratio: 1678 / 937; margin-top: 43px; position: relative;
+width: 100vw;
+margin-left: calc(50% - 50vw);
+overflow: visible; }
+  .about-page .storyMediaDetail { width: 43%; height: 34%; border-width: 5px; }
+  .about-page .introduction { padding-right: 20px; padding-left: 20px; }
+  .about-page .introductionHead h2 { max-width: 13ch; font-size: clamp(43px, 13vw, 60px); }
+  .about-page .principlesLayout { display: flex; flex-direction: column; gap: 14px; }
+  .about-page .principles { order: 1; padding: 0; }
+  .about-page .sideImage { order: 2; min-height: 265px; }
+  .about-page .sideImageRight {
+  display: none;
+}
+  .about-page .principle { min-height: 104px; padding: 23px 21px; }
+  .about-page .principleActive { min-height: 260px; }
+  .about-page .principleTitle { font-size: 32px; }
+  .about-page .journey { padding-right: 20px; padding-left: 20px; }
+  .about-page .journeyHead {
+  padding-top: 76px;
+}
+
+.about-page .journeyHead h2 {
+  font-size: clamp(43px, 10.5vw, 66px);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+  white-space: nowrap;
+}
+  .about-page .timeline { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 67px; padding-left: 35px; }
+  .about-page .timeline::before { display: block; top: 0; bottom: 0; left: 7px; width: 1px; height: auto; background: var(--about-ink); }
+  .about-page .milestone { min-height: auto; padding-bottom: 10px; }
+  .about-page .timelineAxis { top: 22px; right: auto; bottom: auto; left: -35px; width: 15px; height: 15px; }
+  .about-page .timelineAxis::before { display: none; }
+  .about-page .timelineAxis span { top: 7px; left: 7px; width: 13px; height: 13px; }
+  .about-page .milestoneCard { position: relative; top: auto !important; }
+  .about-page .milestoneImage { height: 155px; }
+  .about-page .milestoneNumber { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page .principle, .about-page .principleDescription { transition: none; }
+}
+
+.about-page .about-reveal-word {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page .about-reveal-word {
+    will-change: auto;
+  }
+}
+
+.about-page .ca-expertise {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 260px;
+  padding: 54px 0 60px;
+  overflow: hidden;
+  background: #fff;
+  color: #1b1b1b;
+}
+
+.about-page .ca-expertise-title {
+  margin: 0 20px 35px;
+  text-align: center;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+}
+
+.about-page .ca-marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-page .ca-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: ca-marquee-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+.about-page .ca-marquee-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: clamp(40px, 6vw, 80px);
+  padding-right: clamp(40px, 6vw, 80px);
+}
+
+.about-page .ca-marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+  color: #424242;
+  font-size: clamp(18px, 2vw, 25px);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.about-page .ca-marquee-symbol {
+  color: var(--about-gold);
+  font-size: 24px;
+}
+
+@keyframes ca-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-page .ca-expertise {
+    min-height: 260px;
+    padding: 54px 0 60px;
+  }
+
+  .about-page .ca-expertise-title {
+    margin: 0 18px 35px;
+    font-size: 25px;
+  }
+
+  .about-page .ca-marquee-track {
+    animation-duration: 30s;
+  }
+
+  .about-page .ca-marquee-group {
+    gap: 38px;
+    padding-right: 38px;
+  }
+
+  .about-page .ca-marquee-item {
+    font-size: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page .ca-marquee-track {
+    animation: none;
+  }
+}
+
+/* CA marquee — spacing and alignment fix */
+.about-page .ca-expertise {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 34px 0 46px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.about-page .ca-expertise-title {
+  margin: 0 18px 27px;
+  text-align: center;
+  font-size: clamp(23px, 3vw, 31px);
+  line-height: 1.25;
+}
+
+.about-page .ca-marquee {
+  width: calc(100% - 48px);
+  max-width: 1500px;
+  margin-inline: auto;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 9%,
+    #000 91%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 9%,
+    #000 91%,
+    transparent 100%
+  );
+}
+
+.about-page .ca-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: ca-marquee-scroll 30s linear infinite;
+}
+
+.about-page .ca-marquee-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: clamp(36px, 5vw, 70px);
+  padding-right: clamp(36px, 5vw, 70px);
+}
+
+.about-page .ca-marquee-item {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .about-page .ca-expertise {
+    padding: 34px 0 42px;
+  }
+
+  .about-page .ca-expertise-title {
+    margin: 0 16px 28px;
+    font-size: 24px;
+  }
+
+  .about-page .ca-marquee {
+    width: calc(100% - 28px);
+  }
+
+  .about-page .ca-marquee-group {
+    gap: 34px;
+    padding-right: 34px;
+  }
+}
+
+
+/* About section — reduce excessive bottom spacing */
+.about-page .introduction {
+  padding-bottom: 24px !important;
+  background-color: #ffffff;
+}
+
+/* Keep the expertise marquee connected to About */
+.about-page .ca-expertise {
+  margin-top: 0;
+  padding-top: 28px;
+  padding-bottom: 42px;
+  background-color: #ffffff;
+}
+
+/* Slightly reduce the space before the cards */
+.about-page .introductionHead {
+  margin-bottom: clamp(35px, 4vw, 60px);
+}
+
+/* Prevent extra spacing between expertise and Journey */
+.about-page .journey {
+  margin-top: 0;
+}
+
+
+/* ==========================================
+   JOURNEY - DESKTOP PINNED TIMELINE
+========================================== */
+
+.about-page .journey {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  color: var(--about-ink);
+  background: #f3f3f3;
+}
+
+.about-page .journeyStage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100svh;
+  min-height: 740px;
+  overflow: hidden;
+  background: #f3f3f3;
+}
+
+/* Heading */
+
+.about-page .journeyHead {
+  flex: 0 0 auto;
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: clamp(52px, 7vh, 88px) 20px 0;
+  text-align: center;
+}
+
+.about-page .journeyHead .kicker {
+  margin-bottom: 20px;
+}
+
+.about-page .journeyHead h2 {
+  margin: 0;
+  color: #191919;
+  font-family: var(--display);
+  font-size: clamp(65px, 8vw, 126px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+}
+
+.about-page .journeyHead > p:last-child {
+  display: none;
+}
+
+/* Desktop viewport */
+
+.about-page .journeyDesktopViewport {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 540px;
+  width: calc(100% + var(--page) + var(--page));
+  margin-top: 14px;
+  margin-left: calc(0px - var(--page));
+  overflow: hidden;
+}
+
+.about-page .journeyDesktopTrack {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 clamp(24px, 4vw, 64px);
+  will-change: transform;
+}
+
+/* Horizontal timeline line */
+
+.about-page .journeyDesktopRail {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: rgba(23, 36, 58, 0.7);
+}
+
+/* Individual milestones */
+
+.about-page .journeyDesktopItem {
+  position: relative;
+  flex: 0 0 clamp(390px, 36vw, 500px);
+  height: 100%;
+}
+
+/* Timeline marker */
+
+.about-page .journeyDesktopDot {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: var(--about-gold);
+  border: 2px solid var(--about-deep);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-page .journeyDesktopStem {
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 46px;
+  background: var(--about-ink);
+}
+
+/* Year labels */
+
+.about-page .journeyDesktopYear {
+  position: absolute;
+  left: 50%;
+  color: var(--about-ink);
+  font-family: var(--display);
+  font-size: 27px;
+  line-height: 1;
+  transform: translateX(-50%);
+}
+
+/* Cards */
+
+.about-page .journeyDesktopCard {
+  position: absolute;
+  left: 50%;
+  display: grid;
+  gap: 10px;
+  width: min(350px, calc(100% - 48px));
+  padding: 21px;
+  color: var(--about-ink);
+  background: #fffdf9;
+  box-shadow: 0 14px 30px rgba(23, 36, 58, 0.08);
+  transform: translateX(-50%);
+}
+
+.about-page .journeyDesktopCard h3 {
+  margin: 0;
+  font-size: clamp(24px, 2.1vw, 31px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.about-page .journeyDesktopLabel {
+  margin: 0;
+  color: var(--about-gold);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.about-page .journeyDesktopImage {
+  position: relative;
+  width: 100%;
+  height: 104px;
+  overflow: hidden;
+  background: var(--about-deep);
+}
+
+.about-page .journeyDesktopImage img {
+  object-fit: cover;
+  filter: saturate(0.72);
+}
+
+.about-page .journeyDesktopDescription {
+  margin: 0;
+  color: #566170;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* Alternate card positioning */
+
+.about-page
+.journeyDesktopItem[data-card-side="bottom"]
+.journeyDesktopCard {
+  top: calc(50% + 46px);
+}
+
+.about-page
+.journeyDesktopItem[data-card-side="bottom"]
+.journeyDesktopStem {
+  top: 50%;
+}
+
+.about-page
+.journeyDesktopItem[data-card-side="bottom"]
+.journeyDesktopYear {
+  bottom: calc(50% + 19px);
+}
+
+.about-page
+.journeyDesktopItem[data-card-side="top"]
+.journeyDesktopCard {
+  bottom: calc(50% + 46px);
+}
+
+.about-page
+.journeyDesktopItem[data-card-side="top"]
+.journeyDesktopStem {
+  bottom: 50%;
+}
+
+.about-page
+.journeyDesktopItem[data-card-side="top"]
+.journeyDesktopYear {
+  top: calc(50% + 19px);
+}
+
+
+/* ==========================================
+   MOBILE INFINITE JOURNEY MARQUEE
+========================================== */
+
+.about-page .journeyMobileViewport {
+  display: none;
+}
+
+@media (max-width: 899px) {
+
+  .about-page .journeyStage {
+    display: block;
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .about-page .journeyHead {
+    padding: 76px 20px 0;
+  }
+
+  .about-page .journeyHead .kicker {
+    margin-bottom: 18px;
+  }
+
+  .about-page .journeyHead h2 {
+    font-size: clamp(43px, 10.5vw, 66px);
+    line-height: 1.08;
+    letter-spacing: -0.055em;
+    white-space: nowrap;
+  }
+
+  .about-page .journeyDesktopViewport {
+    display: none;
+  }
+
+  .about-page .journeyMobileViewport {
+    display: block;
+    position: relative;
+    width: 100vw;
+    margin-top: 25px;
+    margin-left: calc(50% - 50vw);
+    padding: 12px 0 55px;
+    overflow: hidden;
+  }
+
+  .about-page .journeyMobileTrack {
+    display: flex;
+    width: max-content;
+    animation: journey-mobile-loop 40s linear infinite;
+    will-change: transform;
+  }
+
+  .about-page .journeyMobileGroup {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 18px;
+  }
+
+  .about-page .journeyMobileItem {
+    flex: 0 0 min(78vw, 310px);
+    width: min(78vw, 310px);
+  }
+
+  /* Mobile year marker */
+
+  .about-page .journeyMobileMarker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .about-page .journeyMobileStem {
+    width: 1px;
+    height: 34px;
+    background: var(--about-ink);
+  }
+
+  .about-page .journeyMobileDot {
+    width: 10px;
+    height: 10px;
+    background: var(--about-gold);
+    border: 2px solid var(--about-deep);
+    border-radius: 50%;
+  }
+
+  .about-page .journeyMobileYear {
+    margin-top: 10px;
+    color: var(--about-ink);
+    font-family: var(--display);
+    font-size: 26px;
+    line-height: 1;
+  }
+
+  /* Mobile milestone card */
+
+  .about-page .journeyMobileCard {
+    display: grid;
+    gap: 11px;
+    min-height: 0;
+    padding: 21px;
+    background: #fffdf9;
+    box-shadow: 0 12px 28px rgba(23, 36, 58, 0.08);
+  }
+
+  .about-page .journeyMobileLabel {
+    margin: 0;
+    color: var(--about-gold);
+    font-size: 9px;
+    font-weight: 750;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  .about-page .journeyMobileCard h3 {
+    margin: 0;
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+
+  .about-page .journeyMobileImage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    overflow: hidden;
+    background: var(--about-deep);
+  }
+
+  .about-page .journeyMobileImage img {
+    object-fit: cover;
+  }
+
+  .about-page .journeyMobileDescription {
+    margin: 0;
+    color: #566170;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+/* Infinite seamless movement */
+
+@keyframes journey-mobile-loop {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-page .journeyMobileTrack {
+    animation: none;
+  }
+
+  .about-page .journeyMobileGroup[aria-hidden="true"] {
+    display: none;
+  }
+
+  .about-page .journeyMobileViewport {
+    overflow-x: auto;
+  }
+}
+
+
+
+/* =============================================
+   JOURNEY — DESKTOP PREMIUM TIMELINE
+============================================= */
+
+@media (min-width: 900px) {
+
+  .about-page {
+    overflow: visible !important;
+  }
+
+  .about-page .journey {
+    position: relative;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #f3f3f3;
+  }
+
+  .about-page .journeyStage {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    background: #f3f3f3;
+  }
+
+  /* Heading */
+
+  .about-page .journeyHead {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 90px 20px 100px;
+    text-align: center;
+  }
+
+  .about-page .journeyHead h2 {
+    margin: 0;
+    font-family: var(--display);
+    font-size: clamp(72px, 8vw, 126px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -.055em;
+    text-transform: uppercase;
+  }
+
+  /* Pinned viewport */
+
+  .about-page .journeyDesktopViewport {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100vw;
+    height: calc(100svh - 88px);
+    min-height: 560px;
+    margin: 0 0 0 calc(50% - 50vw);
+    overflow: hidden;
+  }
+
+  /* Moving track */
+
+  .about-page .journeyDesktopTrack {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: max-content;
+    height: 100%;
+    padding-left: clamp(48px, 5.5vw, 84px);
+    padding-right: max(48px, calc(50vw - 250px));
+    box-sizing: border-box;
+    will-change: transform;
+  }
+
+  /* Rail */
+
+  .about-page .journeyDesktopRail {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: #252525;
+  }
+
+  /* Each milestone */
+
+  .about-page .journeyDesktopItem {
+    position: relative;
+    flex: 0 0 clamp(450px, 32vw, 500px);
+    height: 100%;
+  }
+
+  /* Center dot */
+
+  .about-page .journeyDesktopDot {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    width: 11px;
+    height: 11px;
+    border: 2px solid #202020;
+    border-radius: 50%;
+    background: #202020;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Vertical stem */
+
+  .about-page .journeyDesktopStem {
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 32px;
+    background: #252525;
+    transform: translateX(-50%);
+  }
+
+  /* Year */
+
+  .about-page .journeyDesktopYear {
+    position: absolute;
+    left: 50%;
+    color: #202020;
+    font-family: var(--display);
+    font-size: 36px;
+    line-height: 1;
+    white-space: nowrap;
+    transform: translateX(-50%);
+  }
+
+  /* Card — centered WITHOUT transform */
+
+  
+.about-page .journeyDesktopCard {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: min(430px, calc(100% - 48px));
+  height: 300px;
+  min-height: 300px;
+  padding: 20px;
+
+  display: grid;
+  align-content: start;
+  gap: 10px;
+
+  box-sizing: border-box;
+  color: var(--about-ink);
+  background: #fffdf9;
+  border: 1px solid rgba(23, 36, 58, .06);
+  box-shadow: 0 16px 36px rgba(23, 36, 58, .08);
+
+  transform: none !important;
+}
+
+
+  .about-page .journeyDesktopLabel {
+    margin: 0;
+    color: var(--about-gold);
+    font-size: 9px;
+    font-weight: 750;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+  }
+
+  .about-page .journeyDesktopCard h3 {
+    margin: 0;
+    color: var(--about-ink);
+    font-size: clamp(25px, 1.9vw, 29px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -.04em;
+  }
+
+  .about-page .journeyDesktopImage {
+    position: relative;
+    width: 100%;
+    height: 112px;
+    overflow: hidden;
+    background: var(--about-deep);
+  }
+
+  .about-page .journeyDesktopImage img {
+    object-fit: cover;
+    filter: saturate(.75);
+  }
+
+  .about-page .journeyDesktopDescription {
+    margin: 0;
+    color: #48515c;
+    font-size: 12px;
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  /* First, third, fifth: card below line */
+
+  .about-page
+  .journeyDesktopItem[data-card-side="bottom"]
+  .journeyDesktopCard {
+    top: calc(50% + 32px);
+  }
+
+  .about-page
+  .journeyDesktopItem[data-card-side="bottom"]
+  .journeyDesktopStem {
+    top: 50%;
+  }
+
+  .about-page
+  .journeyDesktopItem[data-card-side="bottom"]
+  .journeyDesktopYear {
+    bottom: calc(50% + 110px);
+  }
+
+  /* Second, fourth, sixth: card above line */
+
+  .about-page
+  .journeyDesktopItem[data-card-side="top"]
+  .journeyDesktopCard {
+    bottom: calc(50% + 32px);
+  }
+
+  .about-page
+  .journeyDesktopItem[data-card-side="top"]
+  .journeyDesktopStem {
+    bottom: 50%;
+  }
+
+  .about-page
+  .journeyDesktopItem[data-card-side="top"]
+  .journeyDesktopYear {
+    top: calc(50% + 110px);
+  }
+
+}
+
+
+
+/* ==========================================
+   CA FAQ — REFERENCE STYLE
+========================================== */
+
+.about-page .ca-faq {
+  position: relative;
+  width: 100%;
+  background: #f3f3f3;
+  color: #1a1a1a;
+  overflow: hidden;
+}
+
+.about-page .ca-faq-container {
+  width: min(1328px, calc(100% - 48px));
+  margin-inline: auto;
+  padding: 112px 0 124px;
+}
+
+.about-page .ca-faq-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.62fr)
+    minmax(0, 1fr);
+  gap: clamp(40px, 5.4vw, 84px);
+  align-items: stretch;
+}
+
+/* LEFT COLUMN */
+
+.about-page .ca-faq-left {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 592px;
+}
+
+.about-page .ca-faq-heading {
+  max-width: 480px;
+}
+
+.about-page .ca-faq-heading .kicker {
+  display: inline-flex;
+  margin: 0 0 24px;
+  color: #1a1a1a;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: .05em;
+}
+
+.about-page .ca-faq-heading .kicker::before {
+  background: #1a1a1a;
+  width: 8px;
+  height: 8px;
+}
+
+.about-page .ca-faq-heading h2 {
+  margin: 0;
+  color: #191919;
+  font-family: var(--display);
+  font-size: clamp(54px, 5.2vw, 76px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.055em;
+  text-transform: uppercase;
+}
+
+/* EXPERT CARD */
+
+.about-page .ca-faq-expert-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 208px;
+  margin-top: auto;
+  padding: 25px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.about-page .ca-faq-avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-page .ca-faq-expert-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.about-page .ca-faq-expert-copy {
+  display: grid;
+  gap: 9px;
+}
+
+.about-page .ca-faq-expert-copy p {
+  margin: 0;
+  color: #444a50;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.about-page .ca-faq-expert-copy p:last-child {
+  color: #1a1a1a;
+}
+
+/* ARROW BUTTON */
+
+.about-page .ca-faq-expert-link {
+  display: flex;
+  flex: 0 0 50px;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: #ffffff;
+  background: #0d0f12;
+  text-decoration: none;
+  overflow: hidden;
+  transition: background .3s ease;
+}
+
+.about-page .ca-faq-expert-link:hover {
+  background: var(--about-gold);
+}
+
+.about-page .ca-faq-arrow-window {
+  display: block;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+
+.about-page .ca-faq-arrow-track {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  transition: transform .45s cubic-bezier(.22, 1, .36, 1);
+}
+
+.about-page .ca-faq-expert-link:hover .ca-faq-arrow-track {
+  transform: translateX(-36px);
+}
+
+.about-page .ca-faq-arrow-track svg {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+}
+
+/* RIGHT COLUMN */
+
+.about-page .ca-faq-list {
+  display: grid;
+  align-content: start;
+  gap: 24px;
+  min-width: 0;
+}
+
+/* QUESTION ROW */
+
+.about-page .ca-faq-item {
+  width: 100%;
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid rgba(23, 36, 58, .025);
+  transition: background .35s ease;
+}
+
+.about-page .ca-faq-item:hover {
+  background: #fffefa;
+}
+
+.about-page .ca-faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  min-height: 77px;
+  padding: 22px 25px;
+  box-sizing: border-box;
+  color: #171717;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.about-page .ca-faq-question-text {
+  font-size: clamp(15px, 1.25vw, 18px);
+  font-weight: 450;
+  line-height: 1.5;
+}
+
+/* PLUS / MINUS ICON */
+
+.about-page .ca-faq-icon {
+  position: relative;
+  display: block;
+  flex: 0 0 25px;
+  width: 25px;
+  height: 25px;
+}
+
+.about-page .ca-faq-icon-horizontal,
+.about-page .ca-faq-icon-vertical {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: #171717;
+  transform: translate(-50%, -50%);
+}
+
+.about-page .ca-faq-icon-vertical {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: transform .45s ease, opacity .35s ease;
+}
+
+.about-page .ca-faq-item.is-open .ca-faq-icon-vertical {
+  transform: translate(-50%, -50%) rotate(90deg) scaleX(0);
+  opacity: 0;
+}
+
+/* ANSWER EXPANSION */
+
+.about-page .ca-faq-answer-wrap {
+  height: 0;
+  overflow: hidden;
+}
+
+.about-page .ca-faq-answer {
+  margin: 0;
+  padding: 0 25px 24px;
+  color: #626871;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+.about-page .ca-faq-question:focus-visible,
+.about-page .ca-faq-expert-link:focus-visible {
+  outline: 2px solid var(--about-gold);
+  outline-offset: 4px;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+
+  .about-page .ca-faq-container {
+    width: calc(100% - 56px);
+    padding: 90px 0;
+  }
+
+  .about-page .ca-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-page .ca-faq-left {
+    min-height: 0;
+  }
+
+  .about-page .ca-faq-heading {
+    max-width: 540px;
+  }
+
+  .about-page .ca-faq-heading h2 {
+    font-size: clamp(52px, 8vw, 78px);
+  }
+
+  .about-page .ca-faq-expert-card {
+    width: 100%;
+    max-width: 480px;
+    margin-top: 34px;
+  }
+
+  .about-page .ca-faq-list {
+    gap: 16px;
+  }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+
+  .about-page .ca-faq-container {
+    width: calc(100% - 40px);
+    padding: 70px 0 85px;
+  }
+
+  .about-page .ca-faq-grid {
+    gap: 34px;
+  }
+
+  .about-page .ca-faq-heading .kicker {
+    margin-bottom: 18px;
+  }
+
+  .about-page .ca-faq-heading h2 {
+    font-size: clamp(44px, 12vw, 64px);
+    line-height: 1.08;
+    letter-spacing: -.055em;
+  }
+
+  .about-page .ca-faq-expert-card {
+    min-height: 190px;
+    padding: 20px;
+    margin-top: 28px;
+  }
+
+  .about-page .ca-faq-avatar {
+    width: 54px;
+    height: 54px;
+  }
+
+  .about-page .ca-faq-question {
+    min-height: 72px;
+    padding: 19px 18px;
+    gap: 12px;
+  }
+
+  .about-page .ca-faq-question-text {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .about-page .ca-faq-icon {
+    flex-basis: 22px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .about-page .ca-faq-answer {
+    padding: 0 18px 20px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .about-page .ca-faq-list {
+    gap: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-page .ca-faq *,
+  .about-page .ca-faq *::before,
+  .about-page .ca-faq *::after {
+    transition-duration: .01ms !important;
+  }
+
+}
+
+
+/* FAQ — Active question black background */
+
+.about-page .ca-faq-item.is-open {
+  background: #191919;
+  border-color: #191919;
+  color: #ffffff;
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease;
+}
+
+/* Active question text */
+.about-page .ca-faq-item.is-open .ca-faq-question {
+  color: #ffffff;
+}
+
+/* Active plus/minus icon */
+.about-page .ca-faq-item.is-open .ca-faq-icon-horizontal,
+.about-page .ca-faq-item.is-open .ca-faq-icon-vertical {
+  background: #ffffff;
+}
+
+/* Active answer text */
+.about-page .ca-faq-item.is-open .ca-faq-answer {
+  color: #b8bec5;
+}
+
+/* Keep hover background from overriding active state */
+.about-page .ca-faq-item.is-open:hover {
+  background: #191919;
+  border-color: #191919;
+}
+
+
+
+/* ==========================================
+   CA PROFESSIONAL EXPERTISE
+========================================== */
+
+.about-page .ca-practice-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(85px, 9vw, 135px) 0;
+  overflow: hidden;
+  color: #f3f3f3;
+  background: #0d0f12;
+}
+
+.about-page .ca-practice-container {
+  width: min(1476px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.about-page .ca-practice-heading {
+  display: grid;
+  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto clamp(55px, 6vw, 85px);
+  text-align: center;
+}
+
+.about-page .ca-practice-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin-bottom: 22px;
+}
+
+.about-page .ca-practice-diamond {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: var(--about-gold);
+  transform: rotate(45deg);
+}
+
+
+
+.about-page .ca-practice-badge p {
+  margin: 0;
+  color: var(--about-gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.about-page .ca-practice-heading h2 {
+  max-width: 900px;
+  margin: 0;
+  color: #f3f3f3;
+  font-family: var(--display);
+  font-size: clamp(44px, 6.5vw, 90px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.05em;
+  text-transform: uppercase;
+}
+
+/* Cards grid */
+
+.about-page .ca-practice-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Individual cards */
+
+.about-page .ca-practice-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 350px;
+  padding: clamp(23px, 2.4vw, 34px);
+  box-sizing: border-box;
+  color: #f3f3f3;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, .07);
+  transition:
+    border-color .4s ease,
+    background .4s ease,
+    transform .4s ease;
+}
+
+.about-page .ca-practice-card:hover {
+  background: #202020;
+  border-color: rgba(190, 156, 94, .5);
+  transform: translateY(-5px);
+}
+
+/* Card top label */
+
+.about-page .ca-practice-card-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+}
+
+.about-page .ca-practice-number {
+  color: var(--about-gold);
+  font-family: var(--display);
+  font-size: 17px;
+  line-height: 1;
+}
+
+.about-page .ca-practice-label {
+  margin: 0;
+  color: #adb5bd;
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: .1em;
+  text-align: right;
+  line-height: 1.4;
+}
+
+/* SVG icons */
+
+.about-page .ca-practice-icon {
+  display: block;
+  width: 121px;
+  height: 58px;
+  margin: 40px 0 34px;
+  color: var(--about-gold);
+  overflow: visible;
+}
+
+/* Card content */
+
+.about-page .ca-practice-card-content {
+  margin-top: auto;
+}
+
+.about-page .ca-practice-card-content h3 {
+  margin: 0 0 15px;
+  color: #f3f3f3;
+  font-size: clamp(23px, 2vw, 29px);
+  font-weight: 500;
+  line-height: 1.13;
+  letter-spacing: -.035em;
+}
+
+.about-page .ca-practice-card-content p {
+  margin: 0;
+  max-width: 40ch;
+  color: #adb5bd;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+
+  .about-page .ca-practice-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .about-page .ca-practice-card {
+    min-height: 320px;
+    padding: 28px;
+  }
+
+  .about-page .ca-practice-card-content h3 {
+    font-size: 28px;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+
+  .about-page .ca-practice-section {
+    padding: 75px 0 85px;
+  }
+
+  .about-page .ca-practice-container {
+    width: calc(100% - 40px);
+  }
+
+  .about-page .ca-practice-heading {
+    margin-bottom: 38px;
+  }
+
+  .about-page .ca-practice-badge {
+    margin-bottom: 18px;
+  }
+
+  .about-page .ca-practice-heading h2 {
+    max-width: 13ch;
+    font-size: clamp(43px, 12vw, 60px);
+    line-height: 1.08;
+  }
+
+  .about-page .ca-practice-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .about-page .ca-practice-card {
+    min-height: 300px;
+    padding: 24px;
+  }
+
+  .about-page .ca-practice-icon {
+    margin: 32px 0 28px;
+  }
+
+  .about-page .ca-practice-card-content h3 {
+    font-size: 27px;
+  }
+
+  .about-page .ca-practice-card-content p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-page .ca-practice-card {
+    transition: none;
+  }
+
+}
+
+
+/* CA Expertise Cards — White Hover Effect */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .about-page .ca-practice-card {
+    transition:
+      background-color 0.45s ease,
+      border-color 0.45s ease,
+      transform 0.45s ease,
+      color 0.45s ease;
+  }
+
+  .about-page .ca-practice-card:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #1a1a1a;
+    transform: translateY(-5px);
+  }
+
+  .about-page .ca-practice-card:hover .ca-practice-number {
+    color: #a9874f;
+  }
+
+  .about-page .ca-practice-card:hover .ca-practice-label {
+    color: #777777;
+  }
+
+  .about-page .ca-practice-card:hover .ca-practice-icon {
+    color: #1a1a1a;
+  }
+
+  .about-page .ca-practice-card:hover .ca-practice-card-content h3 {
+    color: #1a1a1a;
+  }
+
+  .about-page .ca-practice-card:hover .ca-practice-card-content p {
+    color: #626871;
+  }
+}
