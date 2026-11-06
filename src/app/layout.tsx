@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MobileNotchedNavigation } from "@/components/layout/MobileNotchedNavigation";
+import { FloatingContactMenu } from "@/components/layout/FloatingContactMenu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
         {children}
         <MobileNotchedNavigation />
+        <FloatingContactMenu />
       </body>
     </html>
   );

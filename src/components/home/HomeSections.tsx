@@ -1,7 +1,8 @@
 import { ArrowRight, ArrowUpRight, Check, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { branches, headOffices, partners } from "@/data/site";
+import { headOffices, partners } from "@/data/site";
+import BranchesSectionClient from "./BranchesSectionClient";
 
 export function TrustStrip() {
   return (
@@ -76,15 +77,7 @@ export function TeamSection() {
 }
 
 export function BranchesSection() {
-  return (
-    <section className="branches" aria-labelledby="branches-title">
-      <div className="container branches__grid">
-        <div className="branches__intro"><p className="eyebrow eyebrow--light">Our branches</p><h2 className="section-heading section-heading--light" id="branches-title">Our Presence Across India</h2><p>Five locations, connected by the same measured approach to professional work.</p></div>
-        <div className="branches__detail" aria-hidden="true"><span>AT&amp;Co.</span><p>Across India<br />with clarity.</p></div>
-        <ol className="branch-list">{branches.map((branch, index) => <li key={branch.city}><span>0{index + 1}</span><div><strong>{branch.state}</strong><small>{branch.city}</small></div><MapPin aria-hidden="true" size={16} /></li>)}</ol>
-      </div>
-    </section>
-  );
+  return <BranchesSectionClient />;
 }
 
 export function OfficesSection() {

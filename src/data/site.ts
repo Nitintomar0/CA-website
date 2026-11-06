@@ -12,7 +12,7 @@ import {
 export const firm = {
   name: "Abhishek Tiwari & Company",
   descriptor: "Chartered Accountants",
-  logo: "/abhishek-tiwari-and-company-logo.png",
+  logo: "/abhishek.png",
   contactLabel: "Start a confidential conversation",
   contactPhone: "7042218423",
 };
