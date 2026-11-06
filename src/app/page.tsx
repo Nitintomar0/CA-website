@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { ServicesShowcase } from "@/components/home/ServicesShowcase";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { SocialAccountsSection } from "@/components/home/SocialAccountsSection";
 
 export const metadata: Metadata = {
   title: "Abhishek Tiwari & Company | Accounting, Tax & Business Advisory",
@@ -26,7 +27,8 @@ export default function Home() {
         <OfficesSection />
         <ApproachSection />
         <InsightsSection />
-        <ContactExperience />
+<SocialAccountsSection />
+<ContactExperience />
       </main>
       <Footer />
     </>
